@@ -1,37 +1,39 @@
 #include <stdio.h>
 
 /**
- * main - prints all possible different combinations of two two-digit numbers.
+ * main - Printsall possible combinations of two two-digit numbers.
  *
- * Return: zero
+ * Return: Always 0 (Success)
  */
 
 int main(void)
 {
-	int i = 48;
-	int j = 48;
-	int k = 48;
+	int tens;
+	int ones;
+	int t;
+	int o;
 
-	for ( ; i <= 57; i++)
+	for (tens = '0'; tens <= '9'; tens++)
 	{
-		for ( ; j <= 56; j++)
+		for (ones = '0'; ones <= '9'; ones++)
 		{
-			for ( ; k <= 57; k++)
+			for (t = tens; t <= '9'; t++)
 			{
-				int l = j + 1;
-
-				for ( ; l <= 57; l++)
+				for (o = ones + 1; o <= '9'; o++)
 				{
-					putchar(i);
-					putchar(j);
+					putchar(tens);
+					putchar(ones);
 					putchar(' ');
-					putchar(k);
-					putchar(l);
-					if (i == 57 && j == 56 && k == 57 && l == 57)
-						break;
-					putchar(',');
-					putchar(' ');
+					putchar(t);
+					putchar(o);
+					if (!((tens == '9' && ones == '8') &&
+					      (t == '9' && o == '9')))
+					{
+						putchar(',');
+						putchar(' ');
+					}
 				}
+				o = '0';
 			}
 		}
 	}
