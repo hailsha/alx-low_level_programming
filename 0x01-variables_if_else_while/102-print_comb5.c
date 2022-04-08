@@ -8,7 +8,9 @@
 
 int main(void)
 {
-	int i = j = k = 48, l = 49;
+	int i = 48;
+	int j = 48;
+	int k = 48;
 
 	for ( ; i <= 57; i++)
 	{
@@ -16,6 +18,8 @@ int main(void)
 		{
 			for ( ; k <= 57; k++)
 			{
+				int l = j + 1;
+
 				for ( ; l <= 57; l++)
 				{
 					putchar(i);
