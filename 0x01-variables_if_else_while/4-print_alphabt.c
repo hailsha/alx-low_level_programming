@@ -7,7 +7,9 @@
    */
 int main(void)
 {
-	for (char let = 'a'; let <= 'z'; let++)
+	char let = 'a';
+
+	for (let = 'a'; let <= 'z'; let++)
 	{
 		if (let == 'q' || let == 'e')
 			continue;
