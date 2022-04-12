@@ -18,7 +18,7 @@ int main(void)
 		a += b;
 		b += a;
 	}
-	if total % 2 == 1)
+	if (total % 2 == 1)
 		printf("%li", a);
 
 	printf("\n");
