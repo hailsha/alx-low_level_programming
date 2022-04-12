@@ -8,7 +8,7 @@
  */
 int main(void)
 {
-	int num1 = 1, num2 = 2, sum = 0, sum_even = 0;
+	int num1 = 1, num2 = 2, sum = 1, sum_even = 0;
 
 	while (num2 < 4000000)
 	{
