@@ -14,7 +14,7 @@ int main(void)
 
 	for (i = 1; i <= (total / 2); i++)
 	{
-		(i == (total / 2)) ? printf("%li, % li ", a, b) : rintf("%li, %li, ", a, b);
+		(i == (total / 2)) ? printf("%li, % li ", a, b) : printf("%li, %li, ", a, b);
 		a += b;
 		b += a;
 	}
