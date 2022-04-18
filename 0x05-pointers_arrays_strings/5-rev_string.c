@@ -12,11 +12,8 @@ void rev_string(char *s)
 {
 	int fwd = 0, bwd, temp;
 
-	while (*s != '\0')
-	{
+	while (s[fwd] != '\0')
 		fwd++;
-		s++;
-	}
 	fwd--;
 	for (bwd = 0; bwd <= fwd; bwd++, fwd--)
 	{
