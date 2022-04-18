@@ -1,20 +1,21 @@
 #include "main.h"
 
 /**
- * puts_half - print half of a string.
- * @str: character
+ * puts_half - check the code for Holberton School students.
+ * @str: String to be cut in half
+ * Return: Always 0.
  */
 void puts_half(char *str)
 {
 	int len = 0, half;
 
-	while (*str != '\0')
-	{
+	while (str[len] != '\0')
 		len++;
-		str++;
-	}
-	_putchar(str);
-	for (half = 0; half < len; half++)
+	half = (len % 2 == 0) ? (len / 2) : ((len - 1) / 2);
+	while (half < len)
+	{
 		_putchar(str[half]);
+		half++;
+	}
 	_putchar('\n');
 }
