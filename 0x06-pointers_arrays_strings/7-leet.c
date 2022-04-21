@@ -7,22 +7,22 @@
  */
 char *leet(char *s)
 {
-	char let[] = "43071";
-	char upp[] = "AEOTL";
-	char low[] = "aeotl";
-	int j;
+	int count = 0, i;
+	int low_letters[] = {97, 101, 111, 116, 108};
+	int upp_letters[] = {65, 69, 79, 84, 76};
+	int numbers[] = {52, 51, 48, 55, 49};
 
-	while (*s != '\0')
+	while (*(s + count) != '\0')
 	{
-		for (j = 0; j < 5; j++)
+		for (i = 0; i < 5; i++)
 		{
-			if (*s == upp[j] || *s == low[j])
+			if (*(s + count) == low_letters[i] || *(s + count) == upp_letters[i])
 			{
-				*s = let[j];
+				*(s + count) = numbers[i];
 				break;
 			}
 		}
-		s++;
+		count++;
 	}
 	return (s);
 }
