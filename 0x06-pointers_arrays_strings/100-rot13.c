@@ -9,7 +9,7 @@ char *rot13(char *str)
 {
 	int count = 0, i;
 	char alphabet[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
-	char rot13[] = "nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM";
+	char rev[] = "nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM";
 
 	while (*(s + count) != '\0')
 	{
@@ -17,7 +17,7 @@ char *rot13(char *str)
 		{
 			if (*(s + count) == alphabet[i])
 			{
-				*(s + count) = rot13[i];
+				*(s + count) = rev[i];
 				break;
 			}
 		}
