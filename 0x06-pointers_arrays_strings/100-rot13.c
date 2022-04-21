@@ -7,21 +7,20 @@
  */
 char *rot13(char *str)
 {
-	int count = 0, i;
-	char alphabet[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
-	char rev[] = "nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM";
+	int i;
 
-	while (*(s + count) != '\0')
+	for (i = 0; str[i] != '\0'; i++)
 	{
-		for (i = 0; i < 52; i++)
+		if ((*(str + i) >= 'a' && *(str + i) < 'n')
+				|| (*(str + i) >= 'A' && *(str + i) < 'N'))
 		{
-			if (*(s + count) == alphabet[i])
-			{
-				*(s + count) = rev[i];
-				break;
-			}
+			*(str + i) += 13;
 		}
-		count++;
+		else if ((*(str + i) >= 'n' && *(str + i) <= 'z')
+				|| (*(str + i) >= 'N' && *(str + i) <= 'Z'))
+		{
+			*(str + i) -= 13;
+		}
 	}
 	return (str);
 }
