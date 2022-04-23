@@ -1,5 +1,9 @@
 #include <stdio.h>
 
+/**
+ * main - a[2] will print 98
+ * Return: return 0.
+ */
 int main(void)
 {
 	int n;
