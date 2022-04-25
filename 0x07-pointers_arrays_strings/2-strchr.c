@@ -1,29 +1,20 @@
 #include "main.h"
 
 /**
- * _strspn - locates a character in a string,
- * @s: string to be scanned.
- * @accept: string containing the characters to match.
- * Return: the counter to the occurrence of the characters in accept.
+ * _strchr - locates a character in a string,
+ * @s: string.
+ * @c: character.
+ * Return: the pointer to the first occurrence of the character c.
  */
-unsigned int _strspn(char *s, char *accept)
+char *_strchr(char *s, char c)
 {
-	int count = 0, i = 0, j = 0, k, l;
+	unsigned int i = 0;
 
-	while (accept[i] != '\0')
-		i++;
-	while (s[j] != '\0')
-		j++;
-	for (k = 0; k < i; k++)
+	while (s[i] != '\0')
 	{
-		for (l = 0; l < j; l++)
-		{
-			if (*(accept + k) == *(s + l))
-			{
-				count++;
-				break;
-			}
-		}
+		if (s[i] == c)
+			return (s + i);
+		i++;
 	}
-	return (count);
+	return ('\0');
 }
