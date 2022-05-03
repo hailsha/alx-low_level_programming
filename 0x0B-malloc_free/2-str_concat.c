@@ -19,13 +19,12 @@ char *str_concat(char *s1, char *s2)
 		;
 	if (!s1 || !s2)
 		return (NULL);
-	concStr = malloc(sizeof(char) * (i + j + 1));
+	concStr = malloc(sizeof(char) * (i + j));
 	if (!concStr)
 		return (NULL);
 	for (k = 0; s1[k] != '\0'; k++)
 		concStr[k] = s1[k];
 	for (k = 0; s2[k] != '\0'; k++)
 		concStr[k + i] = s2[k];
-	concStr[k] = '\0';
 	return (concStr);
 }
